@@ -18,7 +18,7 @@ exports.createComment = async (req, res) => {
 
         //find the post by ID, add the new commnet to its comments array
         const udpatedPost = await Post.findByIdAndUpdate(post, {$push: {comments: savedComment._id} }, {new: true}  )
-                            .populate("comments") //populate the comments array with comment documents
+                            .populate("comments") //populate the comments array with comment documents // the acutal docu. that realte to the id you can fetch that docu
                             .exec();
 
         res.json({
