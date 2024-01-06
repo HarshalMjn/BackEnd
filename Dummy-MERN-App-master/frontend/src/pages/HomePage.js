@@ -26,7 +26,9 @@ const HomePage = () => {
     }
   };
 
-const deleteHandler = async () => {
+
+
+  const deleteHandler = async () => {
     try{
       const deletePeople = await fetch(
         `${process.env.REACT_APP_BASE_URL}/deleteUser`,
@@ -40,15 +42,20 @@ const deleteHandler = async () => {
     }
     catch(error) {
       console.log(error)
-    }
+  }
 };
+  
+  
+ 
+
+
 
 
 
   useEffect(() => {
     getAllData();
-   
-  }, [ deleteHandler]);
+    
+   }, [deleteData]);
 
 
  
