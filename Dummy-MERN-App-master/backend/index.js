@@ -19,7 +19,7 @@ app.use(
 // Middleware
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://mahajanh006:CI8PymxIMQ3wWJia@cluster0.clzdqef.mongodb.net/EmployeeDataBase")
+mongoose.connect("mongodb+srv://mahajanh006:CI8PymxIMQ3wWJia@cluster0.clzdqef.mongodb.net/?retryWrites=true&w=majority")
 
 app.use("/api/v1", userRoutes);
 
