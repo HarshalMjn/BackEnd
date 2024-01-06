@@ -8,18 +8,10 @@ const PORT = process.env.PORT || 4000;
 
 
 
-app.use(
-  cors({
-    origin: {"https://deploy-mern-1whq.vercel.app"},
-    method:{"POST","GET"},
-    credentials:true
-  })
-);
+
 
 // Middleware
 app.use(express.json());
-
-mongoose.connect("mongodb+srv://mahajanh006:CI8PymxIMQ3wWJia@cluster0.clzdqef.mongodb.net/?retryWrites=true&w=majority")
 
 app.use("/api/v1", userRoutes);
 
