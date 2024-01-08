@@ -14,3 +14,5 @@ app.use("/api/v1", user);
 app.listen(PORT, () => {
     console.log(`App is listening on ${PORT}`);
 })
+
+//why & what cookie parser is use
