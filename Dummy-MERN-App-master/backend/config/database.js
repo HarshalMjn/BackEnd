@@ -4,7 +4,7 @@ require("dotenv").config();
 const dbConnect = () => {
   const dbUri = "mongodb+srv://mahajanh006:A5agBWDUYDHKBJn2@cluster0.uuswitg.mongodb.net/HashDatabase"
 
-  console.log("DB URI:", dbUri);
+
 
   mongoose
     .connect(dbUri, {
