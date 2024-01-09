@@ -38,7 +38,7 @@ const HomePage = () => {
       );
       const res = await deletePeople.json();
       setDelete(res)
-      console.log(res)
+     
       
     }
     catch(error) {
