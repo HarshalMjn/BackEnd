@@ -40,10 +40,16 @@ exports.deleteUser = async (req, res) =>{
      const deletEmpo = await User.findOneAndDelete(id)
 
 
-     return res.status(200).json({
-      status: 201,
-      message: "User deleted successfully",
-    });
+      return res.status(200).json({
+     status: 201,
+     success:true,
+     message:"deleted person",
+    
+  
+     
+    })
+  
+
    }
     catch(error){
     console.log("error", error);
