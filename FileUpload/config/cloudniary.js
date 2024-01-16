@@ -5,7 +5,7 @@ exports.cloudinaryConnenct = () => {
     cloudinary.config({
       cloud_name:process.env.CLUOD_NAME,
       api_key:process.env.API_KEY,
-      pi_secret:process.env.API_SECRET,
+      api_secret:process.env.API_SECRET,
     })
 
   }

@@ -119,10 +119,10 @@ exports.videoUpload = async (req,res) => {
 
        //TODO: add a upper limit of 5MB for Video
        if(!isFileTypeSupported(fileType, supportedTypes)) {
-           return res.status(400).json({
-               success:false,
-               message:'File format not supported',
-           })
+         return res.status(400).json({
+          success:false,
+          message:'File format not supported',
+          })
        }
 
         //file format supported hai
@@ -135,12 +135,12 @@ exports.videoUpload = async (req,res) => {
           name,
           tags,
           email,
-          imageUrl:response.secure_url,
+          videoeUrl:response.secure_url,
       });
 
       res.json({
           success:true,
-          imageUrl:response.secure_url,
+          videoUrl:response.secure_url,
           message:'Video Successfully Uploaded',
       })
 
