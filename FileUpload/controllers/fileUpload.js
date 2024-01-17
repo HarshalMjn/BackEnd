@@ -180,11 +180,13 @@ exports.imageSizeReducer = async (req,res) => {
       name,
       tags,
       email,
+      imageUrl:response.secure_url
 
     });
 
     res.json({
       success:true,
+      imageUrl:response.secure_url,
       meassage:"Image is Successfully Uploaded"
     })
 
