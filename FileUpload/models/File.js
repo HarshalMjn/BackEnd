@@ -26,7 +26,9 @@ fileSchema.post("save", async function(doc) {
         console.log("DOC",doc)
 
         //transporter 
-        const transporterInstance = await transporter();
+        const transporterInstance = transporter;
+
+    
         //TODO: shift this configuration under /config folder
         // let transporter = nodemailer.createTransport({
         //     host: process.env.MAIL_HOST,
@@ -39,7 +41,7 @@ fileSchema.post("save", async function(doc) {
 
         //send mail 
         let info = await transporterInstance.sendMail({
-            from:`CodeHelp - by Harshal`,
+            from:"CodeHelp - by Harshal",
             to: doc.email,
             subject: "New File Uploaded on Cloudinary",
             html:`<h2>Hello</h2> <p>File Uploaded View here: <a href="${doc.imageUrl}">${doc.imageUrl}</a> </p>`,
